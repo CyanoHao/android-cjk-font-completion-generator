@@ -4,7 +4,7 @@
 
 **WARNING:** The implemetation of parallel processing is simple and stupid. 40 GiB memory required.
 
-Install AFDKO, FontForge, otfcc, and otfcc-ttcize.
+Install AFDKO, FontForge, otfcc, otfcc-c2q, and otfcc-ttcize.
 
 ### For Nougat and Oreo
 
