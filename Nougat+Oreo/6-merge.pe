@@ -1,3 +1,0 @@
-Open("lcg/" + $1)
-MergeFonts("cjk/" + $2)
-Generate("out/" + $1)
