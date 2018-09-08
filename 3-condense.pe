@@ -1,4 +1,4 @@
-Open("cjk/" + $1)
+Open("cjk/unkerned/" + $1)
 SelectAll()
 Scale(88, 100, 0, 0)
-Generate("cjk/" + $2)
+Generate("cjk/unkerned/" + $2)

@@ -1,4 +1,4 @@
-Open("cjk/" + $1)
+Open("cjk/unkerned/" + $1)
 SelectAll()
 Transform(100, 0, Strtod($3), 100, -5000, 0)
-Generate("cjk/" + $2)
+Generate("cjk/unkerned/" + $2)

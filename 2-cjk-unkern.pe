@@ -1,0 +1,17 @@
+Open("cjk/" + $1)
+
+gsub = GetLookups("GSUB")
+i = 0
+while (i < SizeOf(gsub))
+	RemoveLookup(gsub[i])
+	i++
+endloop
+
+gpos = GetLookups("GPOS")
+i = 0
+while (i < SizeOf(gpos))
+	RemoveLookup(gpos[i])
+	i++
+endloop
+
+Generate("cjk/unkerned/" + $1)
