@@ -24,68 +24,77 @@ ttc/$basename.ttf: $(echo ttc/$basename.{0,1,2,3,4}.ttf)
 	otf2otc ttc/$basename.{0,1,2,3,4}.ttf -o ttc/$basename.ttc
 	rm ttc/$basename.{0,1,2,3,4}.ttf
 	mv ttc/$basename.ttc ttc/$basename.ttf
-EOF
-	cat >>Makefile <<EOF
 ttc/$basename.0.ttf: ttc/$basename.0.otd
 	otfccbuild ttc/$basename.0.otd -O2 -k -o ttc/$basename.0.ttf
 	ttx -t 'head' -o $basename.ttx lcg/$basename.ttf
 	ttx -m ttc/$basename.0.ttf -o ttc/$basename.0.ttf $basename.ttx
 	rm $basename.ttx ttc/$basename.0.otd
+ttc/$basename.0.otd: out/$basename.ttf $(echo cjk/NotoSansCJK{jp,kr,sc,tc}-$weight.ttf)
+	otfcc-ttcize --prefix ttc/$basename out/$basename.ttf cjk/NotoSansCJK{jp,kr,sc,tc}-$weight.ttf
 EOF
 	for i in $(seq 1 4); do
 		cat >>Makefile <<EOF
 ttc/$basename.$i.ttf: ttc/$basename.$i.otd
 	otfccbuild ttc/$basename.$i.otd -O2 -k -o ttc/$basename.$i.ttf
 	rm ttc/$basename.$i.otd
-EOF
-		cat >>Makefile <<EOF
 ttc/$basename.$i.otd: ttc/$basename.0.otd
 EOF
 	done
-	cat >>Makefile <<EOF
-ttc/$basename.0.otd: out/$basename.ttf $(echo cjk/NotoSansCJK{jp,kr,sc,tc}-$weight.ttf)
-	otfcc-ttcize --prefix ttc/$basename out/$basename.ttf cjk/NotoSansCJK{jp,kr,sc,tc}-$weight.ttf
-EOF
 done
 
 # phase 6: merge
 for weight in Thin Light Regular Medium Bold Black ThinItalic LightItalic Italic MediumItalic BoldItalic BlackItalic; do
 	basename=Roboto-$weight
 	file=$basename.ttf
-	cjkfile=NotoSansCJKsc-$weight.ttf
+	cjkbase=NotoSansCJKsc-$weight
 	cat >>Makefile <<EOF
-out/$file: lcg/$file cjk/unkerned/$cjkfile
-	otfccdump lcg/$file --pretty | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' | otfccbuild -O3 -o lcg/$file
-	fontforge -script 6-merge.pe $file $cjkfile
+out/$file: out/$basename.otd out/$cjkbase.otd
+	python 6-merge.py out/$basename.otd out/$cjkbase.otd
+	otfccbuild out/$basename.otd -O3 -o out/$file
+	rm out/$basename.otd out/$cjkbase.otd
 	ttx -t 'head' -o $basename.ttx lcg/$file
 	ttx -m out/$file -o out/$file $basename.ttx
 	rm $basename.ttx
+out/$basename.otd: lcg/$basename.ttf
+	otfccdump lcg/$file --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/$basename.otd
+out/$cjkbase.otd: cjk/unkerned/$cjkbase.ttf
+	otfccdump cjk/unkerned/$cjkbase.ttf -o out/$cjkbase.otd
 EOF
 done
 for weight in Light Regular Medium Bold LightItalic Italic MediumItalic BoldItalic; do
 	basename=RobotoCondensed-$weight
 	file=$basename.ttf
-	cjkfile=NotoSansCJKscCondensed-$weight.ttf
+	cjkbase=NotoSansCJKscCondensed-$weight
 	cat >>Makefile <<EOF
-out/$file: lcg/$file cjk/unkerned/$cjkfile
-	otfccdump lcg/$file --pretty | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' | otfccbuild -O3 -o lcg/$file
-	fontforge -script 6-merge.pe $file $cjkfile
+out/$file: out/$basename.otd out/$cjkbase.otd
+	python 6-merge.py out/$basename.otd out/$cjkbase.otd
+	otfccbuild out/$basename.otd -O3 -o out/$file
+	rm out/$basename.otd out/$cjkbase.otd
 	ttx -t 'head' -o $basename.ttx lcg/$file
 	ttx -m out/$file -o out/$file $basename.ttx
 	rm $basename.ttx
+out/$basename.otd: lcg/$basename.ttf
+	otfccdump lcg/$file --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/$basename.otd
+out/$cjkbase.otd: cjk/unkerned/$cjkbase.ttf
+	otfccdump cjk/unkerned/$cjkbase.ttf -o out/$cjkbase.otd
 EOF
 done
 for weight in Regular Bold Italic BoldItalic; do
 	basename=NotoSerif-$weight
 	file=$basename.ttf
-	cjkfile=NotoSerifCJKsc-$weight.ttf
+	cjkbase=NotoSerifCJKsc-$weight
 	cat >>Makefile <<EOF
-out/$file: lcg/$file cjk/unkerned/$cjkfile
-	otfccdump lcg/$file --pretty | sed 's|Copyright 2015 Google Inc. All Rights Reserved.|Portions Copyright 2015 Google Inc. Portions Copyright © 2017 Adobe Systems Incorporated (http://www.adobe.com/).|' | otfccbuild -O3 -o lcg/$file
-	fontforge -script 6-merge.pe $file $cjkfile
+out/$file: out/$basename.otd out/$cjkbase.otd
+	python 6-merge.py out/$basename.otd out/$cjkbase.otd
+	otfccbuild out/$basename.otd -O3 -o out/$file
+	rm out/$basename.otd out/$cjkbase.otd
 	ttx -t 'head' -o $basename.ttx lcg/$file
 	ttx -m out/$file -o out/$file $basename.ttx
 	rm $basename.ttx
+out/$basename.otd: lcg/$basename.ttf
+	otfccdump lcg/$file --pretty --no-bom | sed 's|Copyright 2015 Google Inc. All Rights Reserved.|Portions Copyright 2015 Google Inc. Portions Copyright © 2017 Adobe Systems Incorporated (http://www.adobe.com/).|' >out/$basename.otd
+out/$cjkbase.otd: cjk/unkerned/$cjkbase.ttf
+	otfccdump cjk/unkerned/$cjkbase.ttf -o out/$cjkbase.otd
 EOF
 done
 
@@ -142,6 +151,6 @@ for basename in NotoSansCJK{jp,kr,sc,tc}-{Thin,Light,Regular,Medium,Bold,Black} 
 	cat >>Makefile <<EOF
 cjk/$basename.ttf: src/$basename.otf
 	otfccdump.exe --ignore-hints src/$basename.otf --pretty | sed '/designedForVertical/d; /"vhea":/,/}/d; /advanceHeight/d; /verticalOrigin/d' | otfcc-c2q | otfccbuild.exe -O3 -o cjk/$basename.ttf
-	fontforge -script 2-cjk-subset.pe $basename.ttf
+	fontforge -script 2-cjk-subset.pe $basename.ttf 2>/dev/null
 EOF
 done
