@@ -1,3 +1,0 @@
-Open("src/" + $1)
-ScaleToEm(1000)
-Generate("lcg/" + $1)

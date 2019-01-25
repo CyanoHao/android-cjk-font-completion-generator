@@ -1,6 +1,10 @@
 import sys
 import json
 
+from fontlib.transform import Transform
+from fontlib.pkana import ProportionalizeKana
+from fontlib.merge import MergeBelow
+
 if len(sys.argv) != 3:
 	print("usage: " + sys.argv[0] + " latin.otd asian.otd")
 	exit(1)
@@ -14,11 +18,16 @@ with open(latinFilename) as latinFile:
 with open(asianFilename, 'rb') as asianFile:
 	asianFont = json.loads(asianFile.read().decode('UTF-8', errors = 'replace'))
 
-for (uniId, glyphName) in asianFont['cmap'].items():
-	if uniId not in latinFont['cmap'].keys():
-		latinFont['cmap'][uniId] = glyphName
-		if glyphName not in latinFont['glyf'].keys():
-			latinFont['glyf'][glyphName] = asianFont['glyf'][glyphName]
+ProportionalizeKana(asianFont)
+
+latinUpm = latinFont['head']['unitsPerEm']
+asianUpm = asianFont['head']['unitsPerEm']
+
+if (latinUpm != asianUpm):
+	for (_, glyph) in asianFont['glyf'].items():
+		Transform(glyph, latinUpm / asianUpm, 0, 0, latinUpm / asianUpm, 0, 0)
+
+MergeBelow(latinFont, asianFont)
 
 outStr = json.dumps(latinFont, ensure_ascii=False)
 with open(latinFilename, 'w') as outFile:

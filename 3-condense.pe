@@ -1,4 +1,0 @@
-Open("cjk/unkerned/" + $1)
-SelectAll()
-Scale(88, 100, 0, 0)
-Generate("cjk/unkerned/" + $2)
