@@ -2,11 +2,12 @@
 
 Build Roboto, Roboto Condensed, and Noto Serif with CJK support.
 
-+ [Full](full/): simply merge Roboto / Noto Serif with Noto CJK SC. Used by [Chinese (Simplified) Font Completion](https://github.com/Magisk-Modules-Repo/chinesesimplified-font-completion) module.
-+ [GB18030](gb18030/): share glyphs between Roman and Italic.
+## Character Sets
 
-<!-- + [GBK](gbk/): share glyphs among Roman, Italic, and Condensed Roman; Condensed Italic not available.
-+ [通用规范汉字](通规/): share glyphs among Roman, Italic, Condensed Roman, and Condensed Italic. NOT RECOMMANDED, just for fun. -->
++ [Full](full/): simply merge Roboto / Noto Serif with Noto CJK SC. Used by [Chinese (Simplified) Font Completion](https://github.com/Magisk-Modules-Repo/chinesesimplified-font-completion) module.
++ [GB18030 + 通用规范汉字](gb18030/): share glyphs between Roman and Italic.
+
+<!-- [GB2312 + commonly used characters in Mainland China](gb2312/): share glyphs among Roman, Italic, Condensed Roman, and Condensed Italic. NOT RECOMMANDED, just for fun. -->
 
 ## Build for Chinese (Simplified)
 
@@ -30,8 +31,7 @@ Output can be found in `<charset>/out/`.
 + Full: can be built for Chinese (Traditional), Japanese, and Korean.
 + GB18030: can be built for Chinese (Traditional) and Japanese.
 
-<!-- + GBK: can be built for Chinese (Traditional) and Japanese.
-+ 通用规范汉字: Chinese (Simplified) only, would be a disaster if build for other languages. -->
+<!-- 通用规范汉字: Chinese (Simplified) only, would be a disaster if built for other languages. -->
 
 To build, run
 

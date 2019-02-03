@@ -1,4 +1,5 @@
 *.ttf
+*.ttc
 *.otf
 *.otd
 __pycache__/
