@@ -3,7 +3,7 @@ import json
 
 from fontlib.transform import Transform
 from fontlib.pkana import ProportionalizeKana
-from fontlib.unicode import IncludedInGB18030, IncludedIn通规
+from fontlib.unicode import IncludedInGB2312, IncludedIn通规, IncludedInFounder9642, IncludedInHanyi9169
 
 def Merge(base, italic, ext):
 	baseUpm = base['head']['unitsPerEm']
@@ -12,7 +12,7 @@ def Merge(base, italic, ext):
 
 	cjkItalicOrder = []
 	for (u, n) in ext['cmap'].items():
-		if (u not in base['cmap'].keys()) and (IncludedInGB18030(int(u)) or IncludedIn通规(int(u))):
+		if (u not in base['cmap'].keys()) and (IncludedInGB2312(int(u)) or IncludedIn通规(int(u)) or IncludedInFounder9642(int(u)) or IncludedInHanyi9169(int(u))):
 			base['cmap'][u] = n
 			italic['cmap'][u] = 'italic-' + n
 			if n not in base['glyf'].keys():

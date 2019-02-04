@@ -1,13 +1,12 @@
 # Android CJK Font Completion Generator
 
-Build Roboto, Roboto Condensed, and Noto Serif with CJK support.
+Rebuild Roboto, Roboto Condensed, and Noto Serif with CJK support.
 
 ## Character Sets
 
 + [Full](full/): simply merge Roboto / Noto Serif with Noto CJK SC. Used by [Chinese (Simplified) Font Completion](https://github.com/Magisk-Modules-Repo/chinesesimplified-font-completion) module.
 + [GB18030 + 通用规范汉字](gb18030/): share glyphs between Roman and Italic.
-
-<!-- [GB2312 + commonly used characters in Mainland China](gb2312/): share glyphs among Roman, Italic, Condensed Roman, and Condensed Italic. NOT RECOMMANDED, just for fun. -->
++ [GB2312 + 通用规范汉字](gb2312/): share glyphs among Roman, Italic, Condensed Roman, and Condensed Italic. NOT RECOMMANDED, just for fun.
 
 ## Build for Chinese (Simplified)
 
@@ -15,7 +14,7 @@ Install [AFDKO](https://github.com/adobe-type-tools/afdko), [otfcc](https://gith
 
 Download Noto Sans CJK SC Thin/Light/Regular/Medium/Bold/Black (6 files), Noto Serif CJK SC Regular/Bold (2 files), Roboto Thin/Light/Regular/Medium/Bold/Black Roman/Italic (6 × 2 = 12 files), Roboto Condensed Light/Regular/Medium/Bold Roman/Italic (4 × 2 = 8 files), and Noto Serif Regular/Bold Roman/Italic (2 × 2 = 4 files).
 
-Put these 32 files to `<charset>/src/`, then
+Put these 32 files to `src/`, then
 
 ```bash
 cd <charset>/
@@ -30,8 +29,7 @@ Output can be found in `<charset>/out/`.
 
 + Full: can be built for Chinese (Traditional), Japanese, and Korean.
 + GB18030: can be built for Chinese (Traditional) and Japanese.
-
-<!-- 通用规范汉字: Chinese (Simplified) only, would be a disaster if built for other languages. -->
++ GB2312: Chinese (Simplified) only, would be a disaster if built for other languages.
 
 To build, run
 
