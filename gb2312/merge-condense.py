@@ -23,6 +23,8 @@ def Merge(base, italic, condensed, condensedItalic, ext):
 		if (u not in base['cmap'].keys()) and (IncludedInGB2312(int(u)) or IncludedIn通规(int(u)) or IncludedInFounder9642(int(u)) or IncludedInHanyi9169(int(u))):
 			base['cmap'][u] = n
 			italic['cmap'][u] = 'italic-' + n
+			condensed['cmap'][u] = 'condensed-' + n
+			condensedItalic['cmap'][u] = 'condensedItalic-' + n
 			if n not in base['glyf'].keys():
 				glyph = ext['glyf'][n]
 				base['glyf'][n] = glyph
