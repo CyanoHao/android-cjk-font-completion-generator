@@ -15,11 +15,11 @@ ttf/Roboto-Thin.ttf: ttf/Roboto-Thin.otd cjk/NotoSansCJKsc-Thin.otd ttf/Roboto-T
 	PYTHONPATH=.. python merge.py ttf/Roboto-Thin.otd cjk/NotoSansCJKsc-Thin.otd ttf/Roboto-ThinItalic.otd 0.1733
 	otfccbuild ttf/Roboto-Thin.otd -O3 -k -o ttf/Roboto-Thin.ttf
 	ttx -t 'head' -o Roboto-Thin.ttx ../src/Roboto-Thin.ttf
-	ttx -m ttf/Roboto-Thin.ttf -o ttf/Roboto-Thin.ttf Roboto-Thin.ttx
+	ttx -b -m ttf/Roboto-Thin.ttf -o ttf/Roboto-Thin.ttf Roboto-Thin.ttx
 	rm Roboto-Thin.ttx ttf/Roboto-Thin.otd
 	otfccbuild ttf/Roboto-ThinItalic.otd -O3 -k -o ttf/Roboto-ThinItalic.ttf
 	ttx -t 'head' -o Roboto-ThinItalic.ttx ../src/Roboto-ThinItalic.ttf
-	ttx -m ttf/Roboto-ThinItalic.ttf -o ttf/Roboto-ThinItalic.ttf Roboto-ThinItalic.ttx
+	ttx -b -m ttf/Roboto-ThinItalic.ttf -o ttf/Roboto-ThinItalic.ttf Roboto-ThinItalic.ttx
 	rm Roboto-ThinItalic.ttx ttf/Roboto-ThinItalic.otd
 
 ttf/Roboto-Thin.otd: ../src/Roboto-Thin.ttf
@@ -40,11 +40,11 @@ ttf/Roboto-Black.ttf: ttf/Roboto-Black.otd cjk/NotoSansCJKsc-Black.otd ttf/Robot
 	PYTHONPATH=.. python merge.py ttf/Roboto-Black.otd cjk/NotoSansCJKsc-Black.otd ttf/Roboto-BlackItalic.otd 0.1733
 	otfccbuild ttf/Roboto-Black.otd -O3 -k -o ttf/Roboto-Black.ttf
 	ttx -t 'head' -o Roboto-Black.ttx ../src/Roboto-Black.ttf
-	ttx -m ttf/Roboto-Black.ttf -o ttf/Roboto-Black.ttf Roboto-Black.ttx
+	ttx -b -m ttf/Roboto-Black.ttf -o ttf/Roboto-Black.ttf Roboto-Black.ttx
 	rm Roboto-Black.ttx ttf/Roboto-Black.otd
 	otfccbuild ttf/Roboto-BlackItalic.otd -O3 -k -o ttf/Roboto-BlackItalic.ttf
 	ttx -t 'head' -o Roboto-BlackItalic.ttx ../src/Roboto-BlackItalic.ttf
-	ttx -m ttf/Roboto-BlackItalic.ttf -o ttf/Roboto-BlackItalic.ttf Roboto-BlackItalic.ttx
+	ttx -b -m ttf/Roboto-BlackItalic.ttf -o ttf/Roboto-BlackItalic.ttf Roboto-BlackItalic.ttx
 	rm Roboto-BlackItalic.ttx ttf/Roboto-BlackItalic.otd
 
 ttf/Roboto-Black.otd: ../src/Roboto-Black.ttf
@@ -62,26 +62,26 @@ out/Roboto-Light.ttc: ttf/Roboto-Light.ttf ttf/Roboto-LightItalic.ttf ttf/Roboto
 ttf/RobotoCondensed-LightItalic.ttf: ttf/Roboto-Light.ttf
 	otfccbuild ttf/RobotoCondensed-LightItalic.otd -O3 -k -o ttf/RobotoCondensed-LightItalic.ttf
 	ttx -t 'head' -o RobotoCondensed-LightItalic.ttx ../src/RobotoCondensed-LightItalic.ttf
-	ttx -m ttf/RobotoCondensed-LightItalic.ttf -o ttf/RobotoCondensed-LightItalic.ttf RobotoCondensed-LightItalic.ttx
+	ttx -b -m ttf/RobotoCondensed-LightItalic.ttf -o ttf/RobotoCondensed-LightItalic.ttf RobotoCondensed-LightItalic.ttx
 	rm RobotoCondensed-LightItalic.ttx ttf/RobotoCondensed-LightItalic.otd
 
 ttf/RobotoCondensed-Light.ttf: ttf/Roboto-Light.ttf
 	otfccbuild ttf/RobotoCondensed-Light.otd -O3 -k -o ttf/RobotoCondensed-Light.ttf
 	ttx -t 'head' -o RobotoCondensed-Light.ttx ../src/RobotoCondensed-Light.ttf
-	ttx -m ttf/RobotoCondensed-Light.ttf -o ttf/RobotoCondensed-Light.ttf RobotoCondensed-Light.ttx
+	ttx -b -m ttf/RobotoCondensed-Light.ttf -o ttf/RobotoCondensed-Light.ttf RobotoCondensed-Light.ttx
 	rm RobotoCondensed-Light.ttx ttf/RobotoCondensed-Light.otd
 
 ttf/Roboto-LightItalic.ttf: ttf/Roboto-Light.ttf
 	otfccbuild ttf/Roboto-LightItalic.otd -O3 -k -o ttf/Roboto-LightItalic.ttf
 	ttx -t 'head' -o Roboto-LightItalic.ttx ../src/Roboto-LightItalic.ttf
-	ttx -m ttf/Roboto-LightItalic.ttf -o ttf/Roboto-LightItalic.ttf Roboto-LightItalic.ttx
+	ttx -b -m ttf/Roboto-LightItalic.ttf -o ttf/Roboto-LightItalic.ttf Roboto-LightItalic.ttx
 	rm Roboto-LightItalic.ttx ttf/Roboto-LightItalic.otd
 
 ttf/Roboto-Light.ttf: ttf/Roboto-Light.otd cjk/NotoSansCJKsc-Light.otd ttf/Roboto-LightItalic.otd ttf/RobotoCondensed-Light.otd ttf/RobotoCondensed-LightItalic.otd
 	PYTHONPATH=.. python merge-condense.py ttf/Roboto-Light.otd cjk/NotoSansCJKsc-Light.otd ttf/Roboto-LightItalic.otd ttf/RobotoCondensed-Light.otd ttf/RobotoCondensed-LightItalic.otd 0.1733
 	otfccbuild ttf/Roboto-Light.otd -O3 -k -o ttf/Roboto-Light.ttf
 	ttx -t 'head' -o Roboto-Light.ttx ../src/Roboto-Light.ttf
-	ttx -m ttf/Roboto-Light.ttf -o ttf/Roboto-Light.ttf Roboto-Light.ttx
+	ttx -b -m ttf/Roboto-Light.ttf -o ttf/Roboto-Light.ttf Roboto-Light.ttx
 	rm Roboto-Light.ttx ttf/Roboto-Light.otd
 
 ttf/Roboto-Light.otd: ../src/Roboto-Light.ttf
@@ -107,26 +107,26 @@ out/Roboto-Regular.ttc: ttf/Roboto-Regular.ttf ttf/Roboto-Italic.ttf ttf/RobotoC
 ttf/RobotoCondensed-Italic.ttf: ttf/Roboto-Regular.ttf
 	otfccbuild ttf/RobotoCondensed-Italic.otd -O3 -k -o ttf/RobotoCondensed-Italic.ttf
 	ttx -t 'head' -o RobotoCondensed-Italic.ttx ../src/RobotoCondensed-Italic.ttf
-	ttx -m ttf/RobotoCondensed-Italic.ttf -o ttf/RobotoCondensed-Italic.ttf RobotoCondensed-Italic.ttx
+	ttx -b -m ttf/RobotoCondensed-Italic.ttf -o ttf/RobotoCondensed-Italic.ttf RobotoCondensed-Italic.ttx
 	rm RobotoCondensed-Italic.ttx ttf/RobotoCondensed-Italic.otd
 
 ttf/RobotoCondensed-Regular.ttf: ttf/Roboto-Regular.ttf
 	otfccbuild ttf/RobotoCondensed-Regular.otd -O3 -k -o ttf/RobotoCondensed-Regular.ttf
 	ttx -t 'head' -o RobotoCondensed-Regular.ttx ../src/RobotoCondensed-Regular.ttf
-	ttx -m ttf/RobotoCondensed-Regular.ttf -o ttf/RobotoCondensed-Regular.ttf RobotoCondensed-Regular.ttx
+	ttx -b -m ttf/RobotoCondensed-Regular.ttf -o ttf/RobotoCondensed-Regular.ttf RobotoCondensed-Regular.ttx
 	rm RobotoCondensed-Regular.ttx ttf/RobotoCondensed-Regular.otd
 
 ttf/Roboto-Italic.ttf: ttf/Roboto-Regular.ttf
 	otfccbuild ttf/Roboto-Italic.otd -O3 -k -o ttf/Roboto-Italic.ttf
 	ttx -t 'head' -o Roboto-Italic.ttx ../src/Roboto-Italic.ttf
-	ttx -m ttf/Roboto-Italic.ttf -o ttf/Roboto-Italic.ttf Roboto-Italic.ttx
+	ttx -b -m ttf/Roboto-Italic.ttf -o ttf/Roboto-Italic.ttf Roboto-Italic.ttx
 	rm Roboto-Italic.ttx ttf/Roboto-Italic.otd
 
 ttf/Roboto-Regular.ttf: ttf/Roboto-Regular.otd cjk/NotoSansCJKsc-Regular.otd ttf/Roboto-Italic.otd ttf/RobotoCondensed-Regular.otd ttf/RobotoCondensed-Italic.otd
 	PYTHONPATH=.. python merge-condense.py ttf/Roboto-Regular.otd cjk/NotoSansCJKsc-Regular.otd ttf/Roboto-Italic.otd ttf/RobotoCondensed-Regular.otd ttf/RobotoCondensed-Italic.otd 0.1733
 	otfccbuild ttf/Roboto-Regular.otd -O3 -k -o ttf/Roboto-Regular.ttf
 	ttx -t 'head' -o Roboto-Regular.ttx ../src/Roboto-Regular.ttf
-	ttx -m ttf/Roboto-Regular.ttf -o ttf/Roboto-Regular.ttf Roboto-Regular.ttx
+	ttx -b -m ttf/Roboto-Regular.ttf -o ttf/Roboto-Regular.ttf Roboto-Regular.ttx
 	rm Roboto-Regular.ttx ttf/Roboto-Regular.otd
 
 ttf/Roboto-Regular.otd: ../src/Roboto-Regular.ttf
@@ -152,26 +152,26 @@ out/Roboto-Medium.ttc: ttf/Roboto-Medium.ttf ttf/Roboto-MediumItalic.ttf ttf/Rob
 ttf/RobotoCondensed-MediumItalic.ttf: ttf/Roboto-Medium.ttf
 	otfccbuild ttf/RobotoCondensed-MediumItalic.otd -O3 -k -o ttf/RobotoCondensed-MediumItalic.ttf
 	ttx -t 'head' -o RobotoCondensed-MediumItalic.ttx ../src/RobotoCondensed-MediumItalic.ttf
-	ttx -m ttf/RobotoCondensed-MediumItalic.ttf -o ttf/RobotoCondensed-MediumItalic.ttf RobotoCondensed-MediumItalic.ttx
+	ttx -b -m ttf/RobotoCondensed-MediumItalic.ttf -o ttf/RobotoCondensed-MediumItalic.ttf RobotoCondensed-MediumItalic.ttx
 	rm RobotoCondensed-MediumItalic.ttx ttf/RobotoCondensed-MediumItalic.otd
 
 ttf/RobotoCondensed-Medium.ttf: ttf/Roboto-Medium.ttf
 	otfccbuild ttf/RobotoCondensed-Medium.otd -O3 -k -o ttf/RobotoCondensed-Medium.ttf
 	ttx -t 'head' -o RobotoCondensed-Medium.ttx ../src/RobotoCondensed-Medium.ttf
-	ttx -m ttf/RobotoCondensed-Medium.ttf -o ttf/RobotoCondensed-Medium.ttf RobotoCondensed-Medium.ttx
+	ttx -b -m ttf/RobotoCondensed-Medium.ttf -o ttf/RobotoCondensed-Medium.ttf RobotoCondensed-Medium.ttx
 	rm RobotoCondensed-Medium.ttx ttf/RobotoCondensed-Medium.otd
 
 ttf/Roboto-MediumItalic.ttf: ttf/Roboto-Medium.ttf
 	otfccbuild ttf/Roboto-MediumItalic.otd -O3 -k -o ttf/Roboto-MediumItalic.ttf
 	ttx -t 'head' -o Roboto-MediumItalic.ttx ../src/Roboto-MediumItalic.ttf
-	ttx -m ttf/Roboto-MediumItalic.ttf -o ttf/Roboto-MediumItalic.ttf Roboto-MediumItalic.ttx
+	ttx -b -m ttf/Roboto-MediumItalic.ttf -o ttf/Roboto-MediumItalic.ttf Roboto-MediumItalic.ttx
 	rm Roboto-MediumItalic.ttx ttf/Roboto-MediumItalic.otd
 
 ttf/Roboto-Medium.ttf: ttf/Roboto-Medium.otd cjk/NotoSansCJKsc-Medium.otd ttf/Roboto-MediumItalic.otd ttf/RobotoCondensed-Medium.otd ttf/RobotoCondensed-MediumItalic.otd
 	PYTHONPATH=.. python merge-condense.py ttf/Roboto-Medium.otd cjk/NotoSansCJKsc-Medium.otd ttf/Roboto-MediumItalic.otd ttf/RobotoCondensed-Medium.otd ttf/RobotoCondensed-MediumItalic.otd 0.1733
 	otfccbuild ttf/Roboto-Medium.otd -O3 -k -o ttf/Roboto-Medium.ttf
 	ttx -t 'head' -o Roboto-Medium.ttx ../src/Roboto-Medium.ttf
-	ttx -m ttf/Roboto-Medium.ttf -o ttf/Roboto-Medium.ttf Roboto-Medium.ttx
+	ttx -b -m ttf/Roboto-Medium.ttf -o ttf/Roboto-Medium.ttf Roboto-Medium.ttx
 	rm Roboto-Medium.ttx ttf/Roboto-Medium.otd
 
 ttf/Roboto-Medium.otd: ../src/Roboto-Medium.ttf
@@ -197,26 +197,26 @@ out/Roboto-Bold.ttc: ttf/Roboto-Bold.ttf ttf/Roboto-BoldItalic.ttf ttf/RobotoCon
 ttf/RobotoCondensed-BoldItalic.ttf: ttf/Roboto-Bold.ttf
 	otfccbuild ttf/RobotoCondensed-BoldItalic.otd -O3 -k -o ttf/RobotoCondensed-BoldItalic.ttf
 	ttx -t 'head' -o RobotoCondensed-BoldItalic.ttx ../src/RobotoCondensed-BoldItalic.ttf
-	ttx -m ttf/RobotoCondensed-BoldItalic.ttf -o ttf/RobotoCondensed-BoldItalic.ttf RobotoCondensed-BoldItalic.ttx
+	ttx -b -m ttf/RobotoCondensed-BoldItalic.ttf -o ttf/RobotoCondensed-BoldItalic.ttf RobotoCondensed-BoldItalic.ttx
 	rm RobotoCondensed-BoldItalic.ttx ttf/RobotoCondensed-BoldItalic.otd
 
 ttf/RobotoCondensed-Bold.ttf: ttf/Roboto-Bold.ttf
 	otfccbuild ttf/RobotoCondensed-Bold.otd -O3 -k -o ttf/RobotoCondensed-Bold.ttf
 	ttx -t 'head' -o RobotoCondensed-Bold.ttx ../src/RobotoCondensed-Bold.ttf
-	ttx -m ttf/RobotoCondensed-Bold.ttf -o ttf/RobotoCondensed-Bold.ttf RobotoCondensed-Bold.ttx
+	ttx -b -m ttf/RobotoCondensed-Bold.ttf -o ttf/RobotoCondensed-Bold.ttf RobotoCondensed-Bold.ttx
 	rm RobotoCondensed-Bold.ttx ttf/RobotoCondensed-Bold.otd
 
 ttf/Roboto-BoldItalic.ttf: ttf/Roboto-Bold.ttf
 	otfccbuild ttf/Roboto-BoldItalic.otd -O3 -k -o ttf/Roboto-BoldItalic.ttf
 	ttx -t 'head' -o Roboto-BoldItalic.ttx ../src/Roboto-BoldItalic.ttf
-	ttx -m ttf/Roboto-BoldItalic.ttf -o ttf/Roboto-BoldItalic.ttf Roboto-BoldItalic.ttx
+	ttx -b -m ttf/Roboto-BoldItalic.ttf -o ttf/Roboto-BoldItalic.ttf Roboto-BoldItalic.ttx
 	rm Roboto-BoldItalic.ttx ttf/Roboto-BoldItalic.otd
 
 ttf/Roboto-Bold.ttf: ttf/Roboto-Bold.otd cjk/NotoSansCJKsc-Bold.otd ttf/Roboto-BoldItalic.otd ttf/RobotoCondensed-Bold.otd ttf/RobotoCondensed-BoldItalic.otd
 	PYTHONPATH=.. python merge-condense.py ttf/Roboto-Bold.otd cjk/NotoSansCJKsc-Bold.otd ttf/Roboto-BoldItalic.otd ttf/RobotoCondensed-Bold.otd ttf/RobotoCondensed-BoldItalic.otd 0.1733
 	otfccbuild ttf/Roboto-Bold.otd -O3 -k -o ttf/Roboto-Bold.ttf
 	ttx -t 'head' -o Roboto-Bold.ttx ../src/Roboto-Bold.ttf
-	ttx -m ttf/Roboto-Bold.ttf -o ttf/Roboto-Bold.ttf Roboto-Bold.ttx
+	ttx -b -m ttf/Roboto-Bold.ttf -o ttf/Roboto-Bold.ttf Roboto-Bold.ttx
 	rm Roboto-Bold.ttx ttf/Roboto-Bold.otd
 
 ttf/Roboto-Bold.otd: ../src/Roboto-Bold.ttf
@@ -245,11 +245,11 @@ ttf/NotoSerif-Regular.ttf: ttf/NotoSerif-Regular.otd cjk/NotoSerifCJKsc-Regular.
 	PYTHONPATH=.. python merge.py ttf/NotoSerif-Regular.otd cjk/NotoSerifCJKsc-Regular.otd ttf/NotoSerif-Italic.otd 0.2125
 	otfccbuild ttf/NotoSerif-Regular.otd -O3 -k -o ttf/NotoSerif-Regular.ttf
 	ttx -t 'head' -o NotoSerif-Regular.ttx ../src/NotoSerif-Regular.ttf
-	ttx -m ttf/NotoSerif-Regular.ttf -o ttf/NotoSerif-Regular.ttf NotoSerif-Regular.ttx
+	ttx -b -m ttf/NotoSerif-Regular.ttf -o ttf/NotoSerif-Regular.ttf NotoSerif-Regular.ttx
 	rm NotoSerif-Regular.ttx ttf/NotoSerif-Regular.otd
 	otfccbuild ttf/NotoSerif-Italic.otd -O3 -k -o ttf/NotoSerif-Italic.ttf
 	ttx -t 'head' -o NotoSerif-Italic.ttx ../src/NotoSerif-Italic.ttf
-	ttx -m ttf/NotoSerif-Italic.ttf -o ttf/NotoSerif-Italic.ttf NotoSerif-Italic.ttx
+	ttx -b -m ttf/NotoSerif-Italic.ttf -o ttf/NotoSerif-Italic.ttf NotoSerif-Italic.ttx
 	rm NotoSerif-Italic.ttx ttf/NotoSerif-Italic.otd
 
 ttf/NotoSerif-Regular.otd: ../src/NotoSerif-Regular.ttf
@@ -270,11 +270,11 @@ ttf/NotoSerif-Bold.ttf: ttf/NotoSerif-Bold.otd cjk/NotoSerifCJKsc-Bold.otd ttf/N
 	PYTHONPATH=.. python merge.py ttf/NotoSerif-Bold.otd cjk/NotoSerifCJKsc-Bold.otd ttf/NotoSerif-BoldItalic.otd 0.2125
 	otfccbuild ttf/NotoSerif-Bold.otd -O3 -k -o ttf/NotoSerif-Bold.ttf
 	ttx -t 'head' -o NotoSerif-Bold.ttx ../src/NotoSerif-Bold.ttf
-	ttx -m ttf/NotoSerif-Bold.ttf -o ttf/NotoSerif-Bold.ttf NotoSerif-Bold.ttx
+	ttx -b -m ttf/NotoSerif-Bold.ttf -o ttf/NotoSerif-Bold.ttf NotoSerif-Bold.ttx
 	rm NotoSerif-Bold.ttx ttf/NotoSerif-Bold.otd
 	otfccbuild ttf/NotoSerif-BoldItalic.otd -O3 -k -o ttf/NotoSerif-BoldItalic.ttf
 	ttx -t 'head' -o NotoSerif-BoldItalic.ttx ../src/NotoSerif-BoldItalic.ttf
-	ttx -m ttf/NotoSerif-BoldItalic.ttf -o ttf/NotoSerif-BoldItalic.ttf NotoSerif-BoldItalic.ttx
+	ttx -b -m ttf/NotoSerif-BoldItalic.ttf -o ttf/NotoSerif-BoldItalic.ttf NotoSerif-BoldItalic.ttx
 	rm NotoSerif-BoldItalic.ttx ttf/NotoSerif-BoldItalic.otd
 
 ttf/NotoSerif-Bold.otd: ../src/NotoSerif-Bold.ttf

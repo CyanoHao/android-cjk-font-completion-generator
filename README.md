@@ -4,7 +4,8 @@ Rebuild Roboto, Roboto Condensed, and Noto Serif with CJK support.
 
 ## Character Sets
 
-+ [Full](full/): simply merge Roboto / Noto Serif with Noto CJK SC. Used by [Chinese (Simplified) Font Completion](https://github.com/Magisk-Modules-Repo/chinesesimplified-font-completion) module.
++ [Full (OpenType/TT)](full-ttf/): simply merge Roboto / Noto Serif with Noto CJK SC. Used by [Chinese (Simplified) Font Completion](https://github.com/Magisk-Modules-Repo/chinesesimplified-font-completion) module.
++ [Full (OpenType/CFF)](full-otf/): simply merge Roboto / Noto Serif with Noto CJK SC. Under testing. Smaller than OpenType/TT.
 + [GB18030 + 通用规范汉字](gb18030/): share glyphs between Roman and Italic.
 + [GB2312 + 通用规范汉字](gb2312/): share glyphs among Roman, Italic, Condensed Roman, and Condensed Italic. NOT RECOMMANDED, just for fun.
 

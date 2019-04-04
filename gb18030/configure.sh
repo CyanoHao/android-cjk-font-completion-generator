@@ -30,11 +30,11 @@ ttf/$file: ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd
 	PYTHONPATH=.. python merge.py ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd 0.1733
 	otfccbuild ttf/$basename.otd -O3 -k -o ttf/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m ttf/$file -o ttf/$file $basename.ttx
+	ttx -b -m ttf/$file -o ttf/$file $basename.ttx
 	rm $basename.ttx ttf/$basename.otd
 	otfccbuild ttf/$italicbase.otd -O3 -k -o ttf/$italicfile
 	ttx -t 'head' -o $italicbase.ttx ../src/$italicfile
-	ttx -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
+	ttx -b -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
 	rm $italicbase.ttx ttf/$italicbase.otd
 
 ttf/$basename.otd: ../src/$file
@@ -68,11 +68,11 @@ ttf/$file: ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd
 	PYTHONPATH=.. python merge.py ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd 0.1733
 	otfccbuild ttf/$basename.otd -O3 -k -o ttf/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m ttf/$file -o ttf/$file $basename.ttx
+	ttx -b -m ttf/$file -o ttf/$file $basename.ttx
 	rm $basename.ttx ttf/$basename.otd
 	otfccbuild ttf/$italicbase.otd -O3 -k -o ttf/$italicfile
 	ttx -t 'head' -o $italicbase.ttx ../src/$italicfile
-	ttx -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
+	ttx -b -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
 	rm $italicbase.ttx ttf/$italicbase.otd
 
 ttf/$basename.otd: ../src/$file
@@ -106,11 +106,11 @@ ttf/$file: ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd
 	PYTHONPATH=.. python merge.py ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd 0.2125
 	otfccbuild ttf/$basename.otd -O3 -k -o ttf/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m ttf/$file -o ttf/$file $basename.ttx
+	ttx -b -m ttf/$file -o ttf/$file $basename.ttx
 	rm $basename.ttx ttf/$basename.otd
 	otfccbuild ttf/$italicbase.otd -O3 -k -o ttf/$italicfile
 	ttx -t 'head' -o $italicbase.ttx ../src/$italicfile
-	ttx -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
+	ttx -b -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
 	rm $italicbase.ttx ttf/$italicbase.otd
 
 ttf/$basename.otd: ../src/$file

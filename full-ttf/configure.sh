@@ -19,7 +19,7 @@ out/$file: out/$basename.otd cjk/$cjkbase.otd
 	PYTHONPATH=.. python merge.py out/$basename.otd cjk/$cjkbase.otd
 	otfccbuild out/$basename.otd -O3 -o out/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m out/$file -o out/$file $basename.ttx
+	ttx -b -m out/$file -o out/$file $basename.ttx
 	rm $basename.ttx
 out/$basename.otd: ../src/$file
 	mkdir -p out/
@@ -35,7 +35,7 @@ out/$file: out/$basename.otd cjk/$cjkbase.otd
 	PYTHONPATH=.. python merge.py out/$basename.otd cjk/$cjkbase.otd
 	otfccbuild out/$basename.otd -O3 -o out/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m out/$file -o out/$file $basename.ttx
+	ttx -b -m out/$file -o out/$file $basename.ttx
 	rm $basename.ttx
 out/$basename.otd: ../src/$file
 	mkdir -p out/
@@ -51,7 +51,7 @@ out/$file: out/$basename.otd cjk/$cjkbase.otd
 	PYTHONPATH=.. python merge.py out/$basename.otd cjk/$cjkbase.otd
 	otfccbuild out/$basename.otd -O3 -o out/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m out/$file -o out/$file $basename.ttx
+	ttx -b -m out/$file -o out/$file $basename.ttx
 	rm $basename.ttx
 out/$basename.otd: ../src/$file
 	mkdir -p out/

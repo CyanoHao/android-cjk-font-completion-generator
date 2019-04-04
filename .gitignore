@@ -3,3 +3,4 @@
 *.otf
 *.otd
 __pycache__/
+!full-otf/src-otf/*.otf

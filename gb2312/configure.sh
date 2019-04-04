@@ -30,11 +30,11 @@ ttf/$file: ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd
 	PYTHONPATH=.. python merge.py ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd 0.1733
 	otfccbuild ttf/$basename.otd -O3 -k -o ttf/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m ttf/$file -o ttf/$file $basename.ttx
+	ttx -b -m ttf/$file -o ttf/$file $basename.ttx
 	rm $basename.ttx ttf/$basename.otd
 	otfccbuild ttf/$italicbase.otd -O3 -k -o ttf/$italicfile
 	ttx -t 'head' -o $italicbase.ttx ../src/$italicfile
-	ttx -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
+	ttx -b -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
 	rm $italicbase.ttx ttf/$italicbase.otd
 
 ttf/$basename.otd: ../src/$file
@@ -75,26 +75,26 @@ out/$basename.ttc: ttf/$file ttf/$italicfile ttf/$condensedfile ttf/$condensedit
 ttf/$condenseditalicfile: ttf/$file
 	otfccbuild ttf/$condenseditalicbase.otd -O3 -k -o ttf/$condenseditalicfile
 	ttx -t 'head' -o $condenseditalicbase.ttx ../src/$condenseditalicfile
-	ttx -m ttf/$condenseditalicfile -o ttf/$condenseditalicfile $condenseditalicbase.ttx
+	ttx -b -m ttf/$condenseditalicfile -o ttf/$condenseditalicfile $condenseditalicbase.ttx
 	rm $condenseditalicbase.ttx ttf/$condenseditalicbase.otd
 
 ttf/$condensedfile: ttf/$file
 	otfccbuild ttf/$condensedbase.otd -O3 -k -o ttf/$condensedfile
 	ttx -t 'head' -o $condensedbase.ttx ../src/$condensedfile
-	ttx -m ttf/$condensedfile -o ttf/$condensedfile $condensedbase.ttx
+	ttx -b -m ttf/$condensedfile -o ttf/$condensedfile $condensedbase.ttx
 	rm $condensedbase.ttx ttf/$condensedbase.otd
 
 ttf/$italicfile: ttf/$file
 	otfccbuild ttf/$italicbase.otd -O3 -k -o ttf/$italicfile
 	ttx -t 'head' -o $italicbase.ttx ../src/$italicfile
-	ttx -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
+	ttx -b -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
 	rm $italicbase.ttx ttf/$italicbase.otd
 
 ttf/$file: ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd ttf/$condensedbase.otd ttf/$condenseditalicbase.otd
 	PYTHONPATH=.. python merge-condense.py ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd ttf/$condensedbase.otd ttf/$condenseditalicbase.otd 0.1733
 	otfccbuild ttf/$basename.otd -O3 -k -o ttf/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m ttf/$file -o ttf/$file $basename.ttx
+	ttx -b -m ttf/$file -o ttf/$file $basename.ttx
 	rm $basename.ttx ttf/$basename.otd
 
 ttf/$basename.otd: ../src/$file
@@ -137,11 +137,11 @@ ttf/$file: ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd
 	PYTHONPATH=.. python merge.py ttf/$basename.otd cjk/$cjkbase.otd ttf/$italicbase.otd 0.2125
 	otfccbuild ttf/$basename.otd -O3 -k -o ttf/$file
 	ttx -t 'head' -o $basename.ttx ../src/$file
-	ttx -m ttf/$file -o ttf/$file $basename.ttx
+	ttx -b -m ttf/$file -o ttf/$file $basename.ttx
 	rm $basename.ttx ttf/$basename.otd
 	otfccbuild ttf/$italicbase.otd -O3 -k -o ttf/$italicfile
 	ttx -t 'head' -o $italicbase.ttx ../src/$italicfile
-	ttx -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
+	ttx -b -m ttf/$italicfile -o ttf/$italicfile $italicbase.ttx
 	rm $italicbase.ttx ttf/$italicbase.otd
 
 ttf/$basename.otd: ../src/$file
