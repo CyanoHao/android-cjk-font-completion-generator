@@ -24,11 +24,11 @@ ttf/Roboto-Thin.ttf: ttf/Roboto-Thin.otd cjk/NotoSansCJKsc-Thin.otd ttf/Roboto-T
 
 ttf/Roboto-Thin.otd: ../src/Roboto-Thin.ttf
 	mkdir -p ttf/
-	otfccdump ../src/Roboto-Thin.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Thin.otd
+	otfccdump ../src/Roboto-Thin.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Thin.otd
 
 ttf/Roboto-ThinItalic.otd: ../src/Roboto-ThinItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/Roboto-Light.ttc: ttf/Roboto-Light.ttf ttf/Roboto-LightItalic.ttf
 	mkdir -p out/
@@ -49,11 +49,11 @@ ttf/Roboto-Light.ttf: ttf/Roboto-Light.otd cjk/NotoSansCJKsc-Light.otd ttf/Robot
 
 ttf/Roboto-Light.otd: ../src/Roboto-Light.ttf
 	mkdir -p ttf/
-	otfccdump ../src/Roboto-Light.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Light.otd
+	otfccdump ../src/Roboto-Light.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Light.otd
 
 ttf/Roboto-LightItalic.otd: ../src/Roboto-LightItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/Roboto-Regular.ttc: ttf/Roboto-Regular.ttf ttf/Roboto-Italic.ttf
 	mkdir -p out/
@@ -74,11 +74,11 @@ ttf/Roboto-Regular.ttf: ttf/Roboto-Regular.otd cjk/NotoSansCJKsc-Regular.otd ttf
 
 ttf/Roboto-Regular.otd: ../src/Roboto-Regular.ttf
 	mkdir -p ttf/
-	otfccdump ../src/Roboto-Regular.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Regular.otd
+	otfccdump ../src/Roboto-Regular.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Regular.otd
 
 ttf/Roboto-Italic.otd: ../src/Roboto-Italic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/Roboto-Medium.ttc: ttf/Roboto-Medium.ttf ttf/Roboto-MediumItalic.ttf
 	mkdir -p out/
@@ -99,11 +99,11 @@ ttf/Roboto-Medium.ttf: ttf/Roboto-Medium.otd cjk/NotoSansCJKsc-Medium.otd ttf/Ro
 
 ttf/Roboto-Medium.otd: ../src/Roboto-Medium.ttf
 	mkdir -p ttf/
-	otfccdump ../src/Roboto-Medium.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Medium.otd
+	otfccdump ../src/Roboto-Medium.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Medium.otd
 
 ttf/Roboto-MediumItalic.otd: ../src/Roboto-MediumItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/Roboto-Bold.ttc: ttf/Roboto-Bold.ttf ttf/Roboto-BoldItalic.ttf
 	mkdir -p out/
@@ -124,11 +124,11 @@ ttf/Roboto-Bold.ttf: ttf/Roboto-Bold.otd cjk/NotoSansCJKsc-Bold.otd ttf/Roboto-B
 
 ttf/Roboto-Bold.otd: ../src/Roboto-Bold.ttf
 	mkdir -p ttf/
-	otfccdump ../src/Roboto-Bold.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Bold.otd
+	otfccdump ../src/Roboto-Bold.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Bold.otd
 
 ttf/Roboto-BoldItalic.otd: ../src/Roboto-BoldItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/Roboto-Black.ttc: ttf/Roboto-Black.ttf ttf/Roboto-BlackItalic.ttf
 	mkdir -p out/
@@ -149,11 +149,11 @@ ttf/Roboto-Black.ttf: ttf/Roboto-Black.otd cjk/NotoSansCJKsc-Black.otd ttf/Robot
 
 ttf/Roboto-Black.otd: ../src/Roboto-Black.ttf
 	mkdir -p ttf/
-	otfccdump ../src/Roboto-Black.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Black.otd
+	otfccdump ../src/Roboto-Black.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/Roboto-Black.otd
 
 ttf/Roboto-BlackItalic.otd: ../src/Roboto-BlackItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/RobotoCondensed-Light.ttc: ttf/RobotoCondensed-Light.ttf ttf/RobotoCondensed-LightItalic.ttf
 	mkdir -p out/
@@ -174,11 +174,11 @@ ttf/RobotoCondensed-Light.ttf: ttf/RobotoCondensed-Light.otd cjk/NotoSansCJKscCo
 
 ttf/RobotoCondensed-Light.otd: ../src/RobotoCondensed-Light.ttf
 	mkdir -p ttf/
-	otfccdump ../src/RobotoCondensed-Light.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Light.otd
+	otfccdump ../src/RobotoCondensed-Light.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Light.otd
 
 ttf/RobotoCondensed-LightItalic.otd: ../src/RobotoCondensed-LightItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/RobotoCondensed-Regular.ttc: ttf/RobotoCondensed-Regular.ttf ttf/RobotoCondensed-Italic.ttf
 	mkdir -p out/
@@ -199,11 +199,11 @@ ttf/RobotoCondensed-Regular.ttf: ttf/RobotoCondensed-Regular.otd cjk/NotoSansCJK
 
 ttf/RobotoCondensed-Regular.otd: ../src/RobotoCondensed-Regular.ttf
 	mkdir -p ttf/
-	otfccdump ../src/RobotoCondensed-Regular.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Regular.otd
+	otfccdump ../src/RobotoCondensed-Regular.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Regular.otd
 
 ttf/RobotoCondensed-Italic.otd: ../src/RobotoCondensed-Italic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/RobotoCondensed-Medium.ttc: ttf/RobotoCondensed-Medium.ttf ttf/RobotoCondensed-MediumItalic.ttf
 	mkdir -p out/
@@ -224,11 +224,11 @@ ttf/RobotoCondensed-Medium.ttf: ttf/RobotoCondensed-Medium.otd cjk/NotoSansCJKsc
 
 ttf/RobotoCondensed-Medium.otd: ../src/RobotoCondensed-Medium.ttf
 	mkdir -p ttf/
-	otfccdump ../src/RobotoCondensed-Medium.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Medium.otd
+	otfccdump ../src/RobotoCondensed-Medium.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Medium.otd
 
 ttf/RobotoCondensed-MediumItalic.otd: ../src/RobotoCondensed-MediumItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/RobotoCondensed-Bold.ttc: ttf/RobotoCondensed-Bold.ttf ttf/RobotoCondensed-BoldItalic.ttf
 	mkdir -p out/
@@ -249,11 +249,11 @@ ttf/RobotoCondensed-Bold.ttf: ttf/RobotoCondensed-Bold.otd cjk/NotoSansCJKscCond
 
 ttf/RobotoCondensed-Bold.otd: ../src/RobotoCondensed-Bold.ttf
 	mkdir -p ttf/
-	otfccdump ../src/RobotoCondensed-Bold.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Bold.otd
+	otfccdump ../src/RobotoCondensed-Bold.ttf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >ttf/RobotoCondensed-Bold.otd
 
 ttf/RobotoCondensed-BoldItalic.otd: ../src/RobotoCondensed-BoldItalic.ttf
 	mkdir -p ttf/
-	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
+	otfccdump $^ --pretty --no-bom --glyph-name-prefix italic- | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >$@
 
 out/NotoSerif-Regular.ttc: ttf/NotoSerif-Regular.ttf ttf/NotoSerif-Italic.ttf
 	mkdir -p out/

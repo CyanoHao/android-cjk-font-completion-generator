@@ -23,7 +23,7 @@ out/$basename.ttf: out/$basename.otd cjk/$cjkbase.otd
 	rm $basename.ttx
 out/$basename.otd: src-otf/$file
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/$file --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/$basename.otd
+	otfccdump --ignore-hints src-otf/$file --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/$basename.otd
 EOF
 done
 for weight in Light Regular Medium Bold LightItalic Italic MediumItalic BoldItalic; do
@@ -39,7 +39,7 @@ out/$basename.ttf: out/$basename.otd cjk/$cjkbase.otd
 	rm $basename.ttx
 out/$basename.otd: src-otf/$file
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/$file --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/$basename.otd
+	otfccdump --ignore-hints src-otf/$file --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/$basename.otd
 EOF
 done
 for weight in Regular Bold Italic BoldItalic; do

@@ -14,7 +14,7 @@ out/Roboto-Thin.ttf: out/Roboto-Thin.otd cjk/NotoSansCJKsc-Thin.otd
 	rm Roboto-Thin.ttx
 out/Roboto-Thin.otd: src-otf/Roboto-Thin.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-Thin.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Thin.otd
+	otfccdump --ignore-hints src-otf/Roboto-Thin.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Thin.otd
 out/Roboto-Light.ttf: out/Roboto-Light.otd cjk/NotoSansCJKsc-Light.otd
 	PYTHONPATH=.. python merge.py out/Roboto-Light.otd cjk/NotoSansCJKsc-Light.otd
 	otfccbuild -q out/Roboto-Light.otd -O3 -o out/Roboto-Light.ttf
@@ -23,7 +23,7 @@ out/Roboto-Light.ttf: out/Roboto-Light.otd cjk/NotoSansCJKsc-Light.otd
 	rm Roboto-Light.ttx
 out/Roboto-Light.otd: src-otf/Roboto-Light.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-Light.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Light.otd
+	otfccdump --ignore-hints src-otf/Roboto-Light.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Light.otd
 out/Roboto-Regular.ttf: out/Roboto-Regular.otd cjk/NotoSansCJKsc-Regular.otd
 	PYTHONPATH=.. python merge.py out/Roboto-Regular.otd cjk/NotoSansCJKsc-Regular.otd
 	otfccbuild -q out/Roboto-Regular.otd -O3 -o out/Roboto-Regular.ttf
@@ -32,7 +32,7 @@ out/Roboto-Regular.ttf: out/Roboto-Regular.otd cjk/NotoSansCJKsc-Regular.otd
 	rm Roboto-Regular.ttx
 out/Roboto-Regular.otd: src-otf/Roboto-Regular.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-Regular.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Regular.otd
+	otfccdump --ignore-hints src-otf/Roboto-Regular.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Regular.otd
 out/Roboto-Medium.ttf: out/Roboto-Medium.otd cjk/NotoSansCJKsc-Medium.otd
 	PYTHONPATH=.. python merge.py out/Roboto-Medium.otd cjk/NotoSansCJKsc-Medium.otd
 	otfccbuild -q out/Roboto-Medium.otd -O3 -o out/Roboto-Medium.ttf
@@ -41,7 +41,7 @@ out/Roboto-Medium.ttf: out/Roboto-Medium.otd cjk/NotoSansCJKsc-Medium.otd
 	rm Roboto-Medium.ttx
 out/Roboto-Medium.otd: src-otf/Roboto-Medium.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-Medium.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Medium.otd
+	otfccdump --ignore-hints src-otf/Roboto-Medium.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Medium.otd
 out/Roboto-Bold.ttf: out/Roboto-Bold.otd cjk/NotoSansCJKsc-Bold.otd
 	PYTHONPATH=.. python merge.py out/Roboto-Bold.otd cjk/NotoSansCJKsc-Bold.otd
 	otfccbuild -q out/Roboto-Bold.otd -O3 -o out/Roboto-Bold.ttf
@@ -50,7 +50,7 @@ out/Roboto-Bold.ttf: out/Roboto-Bold.otd cjk/NotoSansCJKsc-Bold.otd
 	rm Roboto-Bold.ttx
 out/Roboto-Bold.otd: src-otf/Roboto-Bold.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-Bold.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Bold.otd
+	otfccdump --ignore-hints src-otf/Roboto-Bold.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Bold.otd
 out/Roboto-Black.ttf: out/Roboto-Black.otd cjk/NotoSansCJKsc-Black.otd
 	PYTHONPATH=.. python merge.py out/Roboto-Black.otd cjk/NotoSansCJKsc-Black.otd
 	otfccbuild -q out/Roboto-Black.otd -O3 -o out/Roboto-Black.ttf
@@ -59,7 +59,7 @@ out/Roboto-Black.ttf: out/Roboto-Black.otd cjk/NotoSansCJKsc-Black.otd
 	rm Roboto-Black.ttx
 out/Roboto-Black.otd: src-otf/Roboto-Black.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-Black.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Black.otd
+	otfccdump --ignore-hints src-otf/Roboto-Black.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Black.otd
 out/Roboto-ThinItalic.ttf: out/Roboto-ThinItalic.otd cjk/NotoSansCJKsc-ThinItalic.otd
 	PYTHONPATH=.. python merge.py out/Roboto-ThinItalic.otd cjk/NotoSansCJKsc-ThinItalic.otd
 	otfccbuild -q out/Roboto-ThinItalic.otd -O3 -o out/Roboto-ThinItalic.ttf
@@ -68,7 +68,7 @@ out/Roboto-ThinItalic.ttf: out/Roboto-ThinItalic.otd cjk/NotoSansCJKsc-ThinItali
 	rm Roboto-ThinItalic.ttx
 out/Roboto-ThinItalic.otd: src-otf/Roboto-ThinItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-ThinItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-ThinItalic.otd
+	otfccdump --ignore-hints src-otf/Roboto-ThinItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-ThinItalic.otd
 out/Roboto-LightItalic.ttf: out/Roboto-LightItalic.otd cjk/NotoSansCJKsc-LightItalic.otd
 	PYTHONPATH=.. python merge.py out/Roboto-LightItalic.otd cjk/NotoSansCJKsc-LightItalic.otd
 	otfccbuild -q out/Roboto-LightItalic.otd -O3 -o out/Roboto-LightItalic.ttf
@@ -77,7 +77,7 @@ out/Roboto-LightItalic.ttf: out/Roboto-LightItalic.otd cjk/NotoSansCJKsc-LightIt
 	rm Roboto-LightItalic.ttx
 out/Roboto-LightItalic.otd: src-otf/Roboto-LightItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-LightItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-LightItalic.otd
+	otfccdump --ignore-hints src-otf/Roboto-LightItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-LightItalic.otd
 out/Roboto-Italic.ttf: out/Roboto-Italic.otd cjk/NotoSansCJKsc-Italic.otd
 	PYTHONPATH=.. python merge.py out/Roboto-Italic.otd cjk/NotoSansCJKsc-Italic.otd
 	otfccbuild -q out/Roboto-Italic.otd -O3 -o out/Roboto-Italic.ttf
@@ -86,7 +86,7 @@ out/Roboto-Italic.ttf: out/Roboto-Italic.otd cjk/NotoSansCJKsc-Italic.otd
 	rm Roboto-Italic.ttx
 out/Roboto-Italic.otd: src-otf/Roboto-Italic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-Italic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Italic.otd
+	otfccdump --ignore-hints src-otf/Roboto-Italic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-Italic.otd
 out/Roboto-MediumItalic.ttf: out/Roboto-MediumItalic.otd cjk/NotoSansCJKsc-MediumItalic.otd
 	PYTHONPATH=.. python merge.py out/Roboto-MediumItalic.otd cjk/NotoSansCJKsc-MediumItalic.otd
 	otfccbuild -q out/Roboto-MediumItalic.otd -O3 -o out/Roboto-MediumItalic.ttf
@@ -95,7 +95,7 @@ out/Roboto-MediumItalic.ttf: out/Roboto-MediumItalic.otd cjk/NotoSansCJKsc-Mediu
 	rm Roboto-MediumItalic.ttx
 out/Roboto-MediumItalic.otd: src-otf/Roboto-MediumItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-MediumItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-MediumItalic.otd
+	otfccdump --ignore-hints src-otf/Roboto-MediumItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-MediumItalic.otd
 out/Roboto-BoldItalic.ttf: out/Roboto-BoldItalic.otd cjk/NotoSansCJKsc-BoldItalic.otd
 	PYTHONPATH=.. python merge.py out/Roboto-BoldItalic.otd cjk/NotoSansCJKsc-BoldItalic.otd
 	otfccbuild -q out/Roboto-BoldItalic.otd -O3 -o out/Roboto-BoldItalic.ttf
@@ -104,7 +104,7 @@ out/Roboto-BoldItalic.ttf: out/Roboto-BoldItalic.otd cjk/NotoSansCJKsc-BoldItali
 	rm Roboto-BoldItalic.ttx
 out/Roboto-BoldItalic.otd: src-otf/Roboto-BoldItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-BoldItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-BoldItalic.otd
+	otfccdump --ignore-hints src-otf/Roboto-BoldItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-BoldItalic.otd
 out/Roboto-BlackItalic.ttf: out/Roboto-BlackItalic.otd cjk/NotoSansCJKsc-BlackItalic.otd
 	PYTHONPATH=.. python merge.py out/Roboto-BlackItalic.otd cjk/NotoSansCJKsc-BlackItalic.otd
 	otfccbuild -q out/Roboto-BlackItalic.otd -O3 -o out/Roboto-BlackItalic.ttf
@@ -113,7 +113,7 @@ out/Roboto-BlackItalic.ttf: out/Roboto-BlackItalic.otd cjk/NotoSansCJKsc-BlackIt
 	rm Roboto-BlackItalic.ttx
 out/Roboto-BlackItalic.otd: src-otf/Roboto-BlackItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/Roboto-BlackItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-BlackItalic.otd
+	otfccdump --ignore-hints src-otf/Roboto-BlackItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/Roboto-BlackItalic.otd
 out/RobotoCondensed-Light.ttf: out/RobotoCondensed-Light.otd cjk/NotoSansCJKscCondensed-Light.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-Light.otd cjk/NotoSansCJKscCondensed-Light.otd
 	otfccbuild -q out/RobotoCondensed-Light.otd -O3 -o out/RobotoCondensed-Light.ttf
@@ -122,7 +122,7 @@ out/RobotoCondensed-Light.ttf: out/RobotoCondensed-Light.otd cjk/NotoSansCJKscCo
 	rm RobotoCondensed-Light.ttx
 out/RobotoCondensed-Light.otd: src-otf/RobotoCondensed-Light.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-Light.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Light.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-Light.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Light.otd
 out/RobotoCondensed-Regular.ttf: out/RobotoCondensed-Regular.otd cjk/NotoSansCJKscCondensed-Regular.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-Regular.otd cjk/NotoSansCJKscCondensed-Regular.otd
 	otfccbuild -q out/RobotoCondensed-Regular.otd -O3 -o out/RobotoCondensed-Regular.ttf
@@ -131,7 +131,7 @@ out/RobotoCondensed-Regular.ttf: out/RobotoCondensed-Regular.otd cjk/NotoSansCJK
 	rm RobotoCondensed-Regular.ttx
 out/RobotoCondensed-Regular.otd: src-otf/RobotoCondensed-Regular.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-Regular.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Regular.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-Regular.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Regular.otd
 out/RobotoCondensed-Medium.ttf: out/RobotoCondensed-Medium.otd cjk/NotoSansCJKscCondensed-Medium.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-Medium.otd cjk/NotoSansCJKscCondensed-Medium.otd
 	otfccbuild -q out/RobotoCondensed-Medium.otd -O3 -o out/RobotoCondensed-Medium.ttf
@@ -140,7 +140,7 @@ out/RobotoCondensed-Medium.ttf: out/RobotoCondensed-Medium.otd cjk/NotoSansCJKsc
 	rm RobotoCondensed-Medium.ttx
 out/RobotoCondensed-Medium.otd: src-otf/RobotoCondensed-Medium.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-Medium.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Medium.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-Medium.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Medium.otd
 out/RobotoCondensed-Bold.ttf: out/RobotoCondensed-Bold.otd cjk/NotoSansCJKscCondensed-Bold.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-Bold.otd cjk/NotoSansCJKscCondensed-Bold.otd
 	otfccbuild -q out/RobotoCondensed-Bold.otd -O3 -o out/RobotoCondensed-Bold.ttf
@@ -149,7 +149,7 @@ out/RobotoCondensed-Bold.ttf: out/RobotoCondensed-Bold.otd cjk/NotoSansCJKscCond
 	rm RobotoCondensed-Bold.ttx
 out/RobotoCondensed-Bold.otd: src-otf/RobotoCondensed-Bold.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-Bold.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Bold.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-Bold.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Bold.otd
 out/RobotoCondensed-LightItalic.ttf: out/RobotoCondensed-LightItalic.otd cjk/NotoSansCJKscCondensed-LightItalic.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-LightItalic.otd cjk/NotoSansCJKscCondensed-LightItalic.otd
 	otfccbuild -q out/RobotoCondensed-LightItalic.otd -O3 -o out/RobotoCondensed-LightItalic.ttf
@@ -158,7 +158,7 @@ out/RobotoCondensed-LightItalic.ttf: out/RobotoCondensed-LightItalic.otd cjk/Not
 	rm RobotoCondensed-LightItalic.ttx
 out/RobotoCondensed-LightItalic.otd: src-otf/RobotoCondensed-LightItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-LightItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-LightItalic.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-LightItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-LightItalic.otd
 out/RobotoCondensed-Italic.ttf: out/RobotoCondensed-Italic.otd cjk/NotoSansCJKscCondensed-Italic.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-Italic.otd cjk/NotoSansCJKscCondensed-Italic.otd
 	otfccbuild -q out/RobotoCondensed-Italic.otd -O3 -o out/RobotoCondensed-Italic.ttf
@@ -167,7 +167,7 @@ out/RobotoCondensed-Italic.ttf: out/RobotoCondensed-Italic.otd cjk/NotoSansCJKsc
 	rm RobotoCondensed-Italic.ttx
 out/RobotoCondensed-Italic.otd: src-otf/RobotoCondensed-Italic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-Italic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Italic.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-Italic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-Italic.otd
 out/RobotoCondensed-MediumItalic.ttf: out/RobotoCondensed-MediumItalic.otd cjk/NotoSansCJKscCondensed-MediumItalic.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-MediumItalic.otd cjk/NotoSansCJKscCondensed-MediumItalic.otd
 	otfccbuild -q out/RobotoCondensed-MediumItalic.otd -O3 -o out/RobotoCondensed-MediumItalic.ttf
@@ -176,7 +176,7 @@ out/RobotoCondensed-MediumItalic.ttf: out/RobotoCondensed-MediumItalic.otd cjk/N
 	rm RobotoCondensed-MediumItalic.ttx
 out/RobotoCondensed-MediumItalic.otd: src-otf/RobotoCondensed-MediumItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-MediumItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-MediumItalic.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-MediumItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-MediumItalic.otd
 out/RobotoCondensed-BoldItalic.ttf: out/RobotoCondensed-BoldItalic.otd cjk/NotoSansCJKscCondensed-BoldItalic.otd
 	PYTHONPATH=.. python merge.py out/RobotoCondensed-BoldItalic.otd cjk/NotoSansCJKscCondensed-BoldItalic.otd
 	otfccbuild -q out/RobotoCondensed-BoldItalic.otd -O3 -o out/RobotoCondensed-BoldItalic.ttf
@@ -185,7 +185,7 @@ out/RobotoCondensed-BoldItalic.ttf: out/RobotoCondensed-BoldItalic.otd cjk/NotoS
 	rm RobotoCondensed-BoldItalic.ttx
 out/RobotoCondensed-BoldItalic.otd: src-otf/RobotoCondensed-BoldItalic.otf
 	mkdir -p out/
-	otfccdump --ignore-hints src-otf/RobotoCondensed-BoldItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions Copyright © 2014, 2015, 2018 Adobe Systems Incorporated (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-BoldItalic.otd
+	otfccdump --ignore-hints src-otf/RobotoCondensed-BoldItalic.otf --pretty --no-bom | sed 's|Copyright 2011 Google Inc. All Rights Reserved.|Portions Copyright 2011 Google Inc. Portions © 2014-2019 Adobe (http://www.adobe.com/).|;s/Licensed under the Apache License, Version 2.0/This Font Software is licensed under the SIL Open Font License, Version 1.1./;s|http://www.apache.org/licenses/LICENSE-2.0|http://scripts.sil.org/OFL|' >out/RobotoCondensed-BoldItalic.otd
 out/NotoSerif-Regular.ttf: out/NotoSerif-Regular.otd cjk/NotoSerifCJKsc-Regular.otd
 	PYTHONPATH=.. python merge.py out/NotoSerif-Regular.otd cjk/NotoSerifCJKsc-Regular.otd
 	otfccbuild -q out/NotoSerif-Regular.otd -O3 -o out/NotoSerif-Regular.ttf
