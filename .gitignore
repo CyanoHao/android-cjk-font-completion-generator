@@ -1,0 +1,7 @@
+*.ttf
+*.ttc
+*.otf
+*.otd
+__pycache__/
+!/src/roboto/*.ttf
+!/src/noto/*.ttf
