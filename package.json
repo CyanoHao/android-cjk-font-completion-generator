@@ -1,0 +1,7 @@
+{
+	"name": "android-cjk",
+	"dependencies": {
+		"otfcc-c2q": "=0.7.2",
+		"otfcc-ttcize": "=0.9.5"
+	}
+}

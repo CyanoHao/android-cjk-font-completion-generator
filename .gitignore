@@ -1,7 +1,5 @@
-*.ttf
-*.ttc
-*.otf
-*.otd
 __pycache__/
-!/src/roboto/*.ttf
-!/src/noto/*.ttf
+node_modules/
+/build/
+/out/
+/src/cjk/*.otf
