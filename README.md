@@ -65,6 +65,7 @@ In [gapped TTC](https://github.com/caryll/otfcc-ttcize#options) format, Noto CJK
 + Basic Unix utils;
 + [Python 3](https://www.python.org/),
   + run `git submodule update --init --recursive` to fetch additional modules;
++ [fonttools](https://github.com/fonttools/fonttools) or [afdko](https://github.com/adobe-type-tools/afdko);
 + [Node.js](https://nodejs.org/),
   + run `npm install` to fetch additional modules;
 + [otfcc](https://github.com/caryll/otfcc),
@@ -81,7 +82,7 @@ Download and put these files (30 + 10 + 8 + 30 + 8 = 86) to `src/cjk/`:
 
 ### Configure
 
-To configure language,
+To configure language, edit `configure.py`.
 
 ```python
 class Config:
@@ -107,6 +108,8 @@ Note:
 ### Build
 
 ```bash
+python configure.py
+
 make -j<threads> ttf
 make -j<threads> ttc
 ```
