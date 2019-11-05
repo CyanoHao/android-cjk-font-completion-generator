@@ -56,6 +56,7 @@ def AdditionalCcmp(font):
 		if f[0:4] != 'ccmp':
 			continue
 		gsub_['features'][f].append('lookup_ccmp_1000')
+	gsub_['lookupOrder'].append('lookup_ccmp_1000')
 
 def DummyVmtx(font):
 	font['vhea'] = {
